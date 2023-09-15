@@ -1,6 +1,6 @@
-Repository for my Control4 drivers!
+# Repository for my Control4 drivers
 
-Barco ClickShare Control4 Driver
+## Barco ClickShare Control4 Driver
 
 
 I've written many custom drivers for Control4, specifically surrounding conference room systems. Sadly these drivers remained with a former employer. As I re-write the drivers I will be hosting them here for all to use.
