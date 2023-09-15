@@ -1,5 +1,5 @@
 <devicedata>
-  <version>209</version>
+  <version>210</version>
   <manufacturer>Barco</manufacturer>
   <model>ClickShare</model>
   <search_type>c4:av_gen</search_type>
@@ -12,7 +12,7 @@
   <driver>DriverWorks</driver>
   <copyright>Copyright 2023 JPKDigital-Jeff Kettell.  All rights reserved.</copyright>
   <created>09/13/2023 10:58 AM</created>
-  <modified>09/14/2023 10:04 PM</modified>
+  <modified>09/15/2023 3:32 PM</modified>
   <combo>True</combo>
   <proxies qty="1">
     <proxy name="Barco ClickShare Control" image_source="c4z" large_image="icons/iconCS.png" small_image="icons/iconCS.png">Barco ClickShare Control</proxy>
