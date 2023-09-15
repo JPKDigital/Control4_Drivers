@@ -1,0 +1,9 @@
+﻿<Driver type="c4z" name="Barco ClickShare Control">
+ <Items>
+  <Item type="file" name="Barco Clickshare Control.rtf" />
+  <Item type="file" name="driver.lua" />
+  <Item type="file" name="driver.xml" />
+  <Item type="subfolder" c4zDir="icons" name="icons" recurse="true"/>
+  <Item type="subfolder" c4zDir="www" name="www" recurse="true"/>
+ </Items>
+</Driver>

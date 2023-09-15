@@ -1,0 +1,116 @@
+<devicedata>
+  <version>209</version>
+  <manufacturer>Barco</manufacturer>
+  <model>ClickShare</model>
+  <search_type>c4:av_gen</search_type>
+  <creator>JPK Digital</creator>
+  <name>Barco Clickshare Control</name>
+  <small image_source="c4z">icons/device_sm.png</small>
+  <large image_source="c4z">icons/device_lg.png</large>
+  <control>lua_gen</control>
+  <controlmethod>ip</controlmethod>
+  <driver>DriverWorks</driver>
+  <copyright>Copyright 2023 JPKDigital-Jeff Kettell.  All rights reserved.</copyright>
+  <created>09/13/2023 10:58 AM</created>
+  <modified>09/14/2023 10:04 PM</modified>
+  <combo>True</combo>
+  <proxies qty="1">
+    <proxy name="Barco ClickShare Control" image_source="c4z" large_image="icons/iconCS.png" small_image="icons/iconCS.png">Barco ClickShare Control</proxy>
+  </proxies>
+  <config>
+    <script file="driver.lua"></script>
+    <properties>
+      <property>
+        <name>ClickShare IP Address</name>
+        <type>STRING</type>
+        <default></default>
+      </property>
+      <property>
+        <name>ClickShare API Password</name>
+        <type>STRING</type>
+        <default></default>
+        <password>true</password>
+      </property>
+      <property>
+        <name>ClickShare Uptime</name>
+        <type>STRING</type>
+        <default></default>
+        <password>false</password>
+        <readonly>true</readonly>
+      </property>
+      <property>
+        <name>ClickShare Currently In Use?</name>
+        <type>STRING</type>
+        <readonly>true</readonly>
+        <default>-</default>
+      </property>
+      <property>
+        <name>ClickShare Currently Sharing?</name>
+        <type>STRING</type>
+        <default>-</default>
+        <readonly>true</readonly>
+      </property>
+      <property>
+        <name>Polling Interval Seconds</name>
+        <type>RANGED_INTEGER</type>
+        <minimum>5</minimum>
+        <maximum>1440</maximum>
+        <default>30</default>
+      </property>
+      <property>
+        <name>Debug Mode</name>
+        <type>LIST</type>
+        <items>
+          <item>ON</item>
+          <item>OFF</item>
+        </items>
+        <default>OFF</default>
+      </property>
+    </properties>
+    <commands>
+      <command>
+        <name>Reboot Clickshare</name>
+        <description>Send Reboot Command to Clickshare</description>
+      </command>
+      <command>
+        <name>ClickShare Standby</name>
+        <description>Set Clickshare Standby State to PARAM1</description>
+        <params>
+          <param>
+            <name>StandbyState</name>
+            <type>LIST</type>
+            <items>
+              <item>True</item>
+              <item>False</item>
+            </items>
+          </param>
+        </params>
+      </command>
+      <command>
+        <name>Get ClickShare Uptime</name>
+        <description>Get Current Device Uptime</description>
+      </command>
+    </commands>
+    <actions>
+      <action>
+        <name>Get ClickShare Status</name>
+        <command>getStatusCS</command>
+      </action>
+      <action>
+        <name>ClickShare Standby On</name>
+        <command>standbyCS</command>
+      </action>
+      <action>
+        <name>ClickShare Standby Off</name>
+        <command>wakeFromStandbyCS</command>
+      </action>
+      <action>
+        <name>Reboot ClickShare</name>
+        <command>rebootCS</command>
+      </action>
+    </actions>
+    <documentation file="Barco Clickshare Control.rtf" />
+  </config>
+  <connections></connections>
+  <capabilities></capabilities>
+</devicedata>
