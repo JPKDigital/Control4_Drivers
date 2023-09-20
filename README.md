@@ -1,4 +1,4 @@
-# Repository for my Control4 drivers
+# Control4 Drivers by JPKDigital
 
 ## Barco ClickShare Control4 Driver
 
